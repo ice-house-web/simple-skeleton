@@ -1,0 +1,53 @@
+.skeleton {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  box-shadow:
+    0 2px 10px 0 var(--simple-skeleton-shadow, #e2eef1),
+    0 4px 40px 0 var(--simple-skeleton-shadow, #e2eef1);
+  overflow: hidden;
+  background-color: var(--simple-skeleton-bg, #fff);
+}
+
+.wave::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -150px;
+  top: 0;
+  height: 100%;
+  width: 80%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    var(--simple-skeleton-highlight, #ececec) 50%,
+    transparent 100%
+  );
+  animation: wave var(--simple-skeleton-animation-speed, 2s) cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.pulse {
+  animation: pulse var(--simple-skeleton-animation-speed, 2s) cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes wave {
+  from {
+    left: -80%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}

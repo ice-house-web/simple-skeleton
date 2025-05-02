@@ -5,9 +5,9 @@
 ## Установка
 
 ```bash
-npm install @ice/simple-skeleton
+npm install @ice-house-web/simple-skeleton
 # или
-yarn add @ice/simple-skeleton
+yarn add @ice-house-web/simple-skeleton
 ```
 
 ## Примеры использования

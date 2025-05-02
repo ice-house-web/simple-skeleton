@@ -2,6 +2,21 @@
   "name": "simple-skeleton",
   "private": false,
   "description": "A simple skeleton for React projects",
+  "author": "Sergey Kazarinov <kazarinov092@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "skeleton",
+    "simple-skeleton",
+    "ice-house-web"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ice-house-web/simple-skeleton"
+  },
+  "bugs": {
+    "url": "https://github.com/ice-house-web/simple-skeleton/issues"
+  },
   "version": "0.0.1",
   "main": "dist/skeleton.umd.js",
   "module": "dist/skeleton.es.js",

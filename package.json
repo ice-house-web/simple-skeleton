@@ -1,5 +1,5 @@
 {
-  "name": "simple-skeleton",
+  "name": "@ice/simple-skeleton",
   "private": false,
   "description": "A simple skeleton for React projects",
   "author": "Sergey Kazarinov <kazarinov092@gmail.com>",

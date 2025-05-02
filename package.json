@@ -1,7 +1,22 @@
 {
-  "name": "simple-skeleton",
+  "name": "@ice/simple-skeleton",
   "private": false,
   "description": "A simple skeleton for React projects",
+  "author": "Sergey Kazarinov <kazarinov092@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "skeleton",
+    "simple-skeleton",
+    "ice-house-web"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ice-house-web/simple-skeleton"
+  },
+  "bugs": {
+    "url": "https://github.com/ice-house-web/simple-skeleton/issues"
+  },
   "version": "0.0.1",
   "main": "dist/skeleton.umd.js",
   "module": "dist/skeleton.es.js",
@@ -36,9 +51,17 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.2",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.3",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "conventional-changelog-eslint": "^6.0.0",
     "eslint": "^9.22.0",
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-react-hooks": "^5.2.0",
@@ -46,6 +69,7 @@
     "globals": "^16.0.0",
     "husky": "^9.1.7",
     "prettier": "^3.5.3",
+    "semantic-release": "^24.2.3",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.26.1",
     "vite": "^6.3.1",

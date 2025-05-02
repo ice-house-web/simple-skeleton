@@ -1,4 +1,4 @@
-import { Skeleton } from 'simple-skeleton';
+import { Skeleton } from '@ice-house-web/simple-skeleton';
 import styles from './App.module.css';
 import './index.css';
 
@@ -47,7 +47,7 @@ function App() {
       <main className={styles.main}>
         <section className={styles.section}>
           <h2>Установка</h2>
-          <CodeBlock code="npm install @ice/simple-skeleton" language="bash" />
+          <CodeBlock code="npm install @ice-house-web/simple-skeleton" language="bash" />
         </section>
 
         <section className={styles.section}>

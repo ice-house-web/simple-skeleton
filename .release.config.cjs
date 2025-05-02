@@ -15,7 +15,7 @@ module.exports = {
           { type: 'docs', scope: '*', release: false },
           { type: 'feat', scope: '*', release: 'minor' },
           { type: 'fix', scope: '*', release: 'patch' },
-          { type: 'refactor', scope: '*', release: 'patch' },
+          { type: 'refactor', scope: '*', release: false },
           { type: 'security', scope: '*', release: 'patch' },
           { type: 'style', scope: '*', release: 'patch' },
           { type: 'test', scope: '*', release: false },

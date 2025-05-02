@@ -1,0 +1,11 @@
+.codeBlock {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 1rem 0;
+}

@@ -1,54 +1,87 @@
-# React + TypeScript + Vite
+# Simple Skeleton Component Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Легкая и гибкая библиотека React-компонентов для создания skeleton-загрузчиков.
 
-Currently, two official plugins are available:
+## Установка
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm install @ice/simple-skeleton
+# или
+yarn add @ice/simple-skeleton
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Примеры использования
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Базовое использование
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```tsx
+import { Skeleton } from '@ice/simple-skeleton';
+
+function MyComponent() {
+  return (
+    <div>
+      <Skeleton width={200} height={20} />
+      <Skeleton width="100%" height={40} />
+    </div>
+  );
+}
 ```
+
+### Создание карточки товара
+
+```tsx
+import { Skeleton } from '@ice/simple-skeleton';
+
+function ProductCardSkeleton() {
+  return (
+    <div style={{ padding: '16px', borderRadius: '8px', border: '1px solid #eee' }}>
+      {/* Изображение товара */}
+      <Skeleton width="100%" height={200} />
+
+      {/* Название товара */}
+      <Skeleton width={150} height={24} style={{ marginTop: '12px' }} />
+
+      {/* Описание */}
+      <Skeleton width="100%" height={16} style={{ marginTop: '8px' }} />
+      <Skeleton width="80%" height={16} style={{ marginTop: '8px' }} />
+
+      {/* Цена */}
+      <Skeleton width={80} height={24} style={{ marginTop: '16px' }} />
+    </div>
+  );
+}
+```
+
+## API
+
+### Skeleton
+
+| Свойство        | Тип               | По умолчанию | Описание                         |
+| --------------- | ----------------- | ------------ | -------------------------------- |
+| className       | string            | ''           | Дополнительный CSS класс         |
+| width           | string \| number  | '100%'       | Ширина скелетона                 |
+| height          | string \| number  | '100px'      | Высота скелетона                 |
+| border          | string            | undefined    | Радиус скругления углов          |
+| circle          | boolean           | false        | Отображение в виде круга         |
+| animation       | 'pulse' \| 'wave' | 'wave'       | Тип анимации                     |
+| animationSpeed  | number            | 2            | Скорость анимации в секундах     |
+| backgroundColor | string            | '#ffffff'    | Цвет фона скелетона              |
+| highlightColor  | string            | '#ececec'    | Цвет подсветки для анимации wave |
+| shadowColor     | string            | '#e2eef1'    | Цвет тени скелетона              |
+
+## Глобальная настройка
+
+Библиотека поддерживает темизацию через CSS-переменные:
+
+```css
+:root {
+  --simple-skeleton-bg: #fff; /* Цвет фона */
+  --simple-skeleton-shadow: #e2eef1; /* Цвет тени */
+  --simple-skeleton-highlight: #ececec; /* Цвет подсветки для wave анимации */
+  --simple-skeleton-animation-speed: 2s; /* Скорость анимации */
+}
+```
+
+## Лицензия
+
+MIT

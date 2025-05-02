@@ -3,8 +3,6 @@
  */
 module.exports = {
   branches: ['main'],
-  dryRun: true,
-  ci: false,
   plugins: [
     [
       '@semantic-release/commit-analyzer',
@@ -48,7 +46,7 @@ module.exports = {
     [
       '@semantic-release/npm',
       {
-        npmPublish: false,
+        npmPublish: true,
         pkgRoot: '.',
         access: 'public',
       },

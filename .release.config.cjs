@@ -44,11 +44,25 @@ module.exports = {
       },
     ],
     [
+      '@semantic-release/changelog',
+      {
+        changelogFile: 'CHANGELOG.md',
+        changelogTitle: '# Changelog',
+      },
+    ],
+    [
       '@semantic-release/npm',
       {
         npmPublish: true,
         pkgRoot: '.',
         access: 'public',
+      },
+    ],
+    [
+      '@semantic-release/git',
+      {
+        assets: ['package.json', 'package-lock.json', 'CHANGELOG.md'],
+        message: 'chore(release): ${nextRelease.version} \n\n${nextRelease.notes}',
       },
     ],
     [
@@ -58,20 +72,6 @@ module.exports = {
           "This ${issue.pull_request ? 'PR is included' : 'issue has been resolved'} in version ${nextRelease.version} :tada:",
         labels: ['release'],
         releasedLabels: ['released'],
-      },
-    ],
-    [
-      '@semantic-release/changelog',
-      {
-        changelogFile: 'CHANGELOG.md',
-        changelogTitle: '# Changelog',
-      },
-    ],
-    [
-      '@semantic-release/git',
-      {
-        assets: ['package.json', 'package-lock.json', 'CHANGELOG.md'],
-        message: 'chore(release): ${nextRelease.version} \n\n${nextRelease.notes}',
       },
     ],
   ],

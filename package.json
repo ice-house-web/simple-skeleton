@@ -1,5 +1,5 @@
 {
-  "name": "@ice/simple-skeleton",
+  "name": "@ice-house-web/simple-skeleton",
   "private": false,
   "description": "A simple skeleton for React projects",
   "author": "Sergey Kazarinov <kazarinov092@gmail.com>",
@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ice-house-web/simple-skeleton"
+    "url": "git+https://github.com/ice-house-web/simple-skeleton.git"
   },
   "bugs": {
     "url": "https://github.com/ice-house-web/simple-skeleton/issues"

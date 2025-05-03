@@ -1,21 +1,24 @@
-# Simple Skeleton Component Library
+<div style="display: flex; align-items: center; gap: 16px;">
+  <img src="web/public/simple-skeleton.svg" alt="Simple Skeleton Logo" width="60" height="60"/>
+  <h1 style="margin: 0; font-size: 3rem; background: linear-gradient(45deg, #007cf0, #00dfd8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Simple Skeleton</h1>
+</div>
 
-Легкая и гибкая библиотека React-компонентов для создания skeleton-загрузчиков.
+#### Lightweight and flexible React component library for creating skeleton loaders.
 
-## Установка
+## Installation
 
 ```bash
 npm install @ice-house-web/simple-skeleton
-# или
+# or
 yarn add @ice-house-web/simple-skeleton
 ```
 
-## Примеры использования
+## Usage
 
-### Базовое использование
+### Basic Usage
 
 ```tsx
-import { Skeleton } from '@ice/simple-skeleton';
+import { Skeleton } from '@ice-house-web/simple-skeleton';
 
 function MyComponent() {
   return (
@@ -27,25 +30,25 @@ function MyComponent() {
 }
 ```
 
-### Создание карточки товара
+### Creating a Product Card
 
 ```tsx
-import { Skeleton } from '@ice/simple-skeleton';
+import { Skeleton } from '@ice-house-web/simple-skeleton';
 
 function ProductCardSkeleton() {
   return (
     <div style={{ padding: '16px', borderRadius: '8px', border: '1px solid #eee' }}>
-      {/* Изображение товара */}
+      {/* Product image */}
       <Skeleton width="100%" height={200} />
 
-      {/* Название товара */}
+      {/* Product name */}
       <Skeleton width={150} height={24} style={{ marginTop: '12px' }} />
 
-      {/* Описание */}
+      {/* Description */}
       <Skeleton width="100%" height={16} style={{ marginTop: '8px' }} />
       <Skeleton width="80%" height={16} style={{ marginTop: '8px' }} />
 
-      {/* Цена */}
+      {/* Price */}
       <Skeleton width={80} height={24} style={{ marginTop: '16px' }} />
     </div>
   );
@@ -56,32 +59,32 @@ function ProductCardSkeleton() {
 
 ### Skeleton
 
-| Свойство        | Тип               | По умолчанию | Описание                         |
-| --------------- | ----------------- | ------------ | -------------------------------- |
-| className       | string            | ''           | Дополнительный CSS класс         |
-| width           | string \| number  | '100%'       | Ширина скелетона                 |
-| height          | string \| number  | '100px'      | Высота скелетона                 |
-| border          | string            | undefined    | Радиус скругления углов          |
-| circle          | boolean           | false        | Отображение в виде круга         |
-| animation       | 'pulse' \| 'wave' | 'wave'       | Тип анимации                     |
-| animationSpeed  | number            | 2            | Скорость анимации в секундах     |
-| backgroundColor | string            | '#ffffff'    | Цвет фона скелетона              |
-| highlightColor  | string            | '#ececec'    | Цвет подсветки для анимации wave |
-| shadowColor     | string            | '#e2eef1'    | Цвет тени скелетона              |
+| Property        | Type              | Default   | Description                    |
+| --------------- | ----------------- | --------- | ------------------------------ |
+| className       | string            | ''        | Additional CSS class           |
+| width           | string \| number  | '100%'    | Skeleton width                 |
+| height          | string \| number  | '100px'   | Skeleton height                |
+| border          | string            | undefined | Border radius                  |
+| circle          | boolean           | false     | Display as circle              |
+| animation       | 'pulse' \| 'wave' | 'wave'    | Animation type                 |
+| animationSpeed  | number            | 2         | Animation speed in seconds     |
+| backgroundColor | string            | '#ffffff' | Skeleton background color      |
+| highlightColor  | string            | '#ececec' | Wave animation highlight color |
+| shadowColor     | string            | '#e2eef1' | Skeleton shadow color          |
 
-## Глобальная настройка
+## Global Configuration
 
-Библиотека поддерживает темизацию через CSS-переменные:
+The library supports theming through CSS variables:
 
 ```css
 :root {
-  --simple-skeleton-bg: #fff; /* Цвет фона */
-  --simple-skeleton-shadow: #e2eef1; /* Цвет тени */
-  --simple-skeleton-highlight: #ececec; /* Цвет подсветки для wave анимации */
-  --simple-skeleton-animation-speed: 2s; /* Скорость анимации */
+  --simple-skeleton-bg: #fff; /* Background color */
+  --simple-skeleton-shadow: #e2eef1; /* Shadow color */
+  --simple-skeleton-highlight: #ececec; /* Wave animation highlight color */
+  --simple-skeleton-animation-speed: 2s; /* Animation speed */
 }
 ```
 
-## Лицензия
+## License
 
 MIT

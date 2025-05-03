@@ -40,20 +40,33 @@ function App() {
             </text>
           </svg>
           <h1 className={styles.title}>Simple Skeleton</h1>
+          <a
+            href="https://github.com/ice-house-web/simple-skeleton"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: '#000', marginLeft: '10px' }}
+          >
+            <svg height="32" viewBox="0 0 16 16" width="32">
+              <path
+                fillRule="evenodd"
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+              />
+            </svg>
+          </a>
         </div>
-        <p className={styles.subtitle}>Легкая и гибкая библиотека для создания skeleton-загрузчиков</p>
+        <p className={styles.subtitle}>A lightweight and flexible library for creating skeleton loaders</p>
       </header>
 
       <main className={styles.main}>
         <section className={styles.section}>
-          <h2>Установка</h2>
+          <h2>Installation</h2>
           <CodeBlock code="npm install @ice-house-web/simple-skeleton" language="bash" />
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Базовое использование</h2>
+          <h2 className={styles.sectionTitle}>Basic Usage</h2>
           <div className={styles.example}>
-            <h3>Wave анимация (по умолчанию)</h3>
+            <h3>Wave animation (default)</h3>
             <div className={styles.demo}>
               <div style={{ width: '300px', height: '100px' }}>
                 <Skeleton />
@@ -68,7 +81,7 @@ function App() {
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Типы анимации</h2>
+          <h2 className={styles.sectionTitle}>Animation Types</h2>
 
           <div className={styles.example}>
             <h3 className={styles.exampleTitle}>Wave</h3>
@@ -101,10 +114,10 @@ function App() {
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Кастомизация</h2>
+          <h2 className={styles.sectionTitle}>Customization</h2>
 
           <div className={styles.example}>
-            <h3 className={styles.exampleTitle}>Размеры и скругление</h3>
+            <h3 className={styles.exampleTitle}>Sizes and Border Radius</h3>
             <div className={styles.demo}>
               <Skeleton border="10px" height={30} width={300} />
               <Skeleton border="30px" height={50} width={300} />
@@ -123,7 +136,7 @@ function App() {
           </div>
 
           <div className={styles.example}>
-            <h3 className={styles.exampleTitle}>Скорость анимации</h3>
+            <h3 className={styles.exampleTitle}>Animation Speed</h3>
             <div className={styles.demo}>
               <Skeleton animationSpeed={1} height={100} width={300} />
               <Skeleton animationSpeed={2} height={100} width={300} />
@@ -139,13 +152,13 @@ function App() {
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>CSS переменные</h2>
-          <p>Вы можете кастомизировать внешний вид скелетона с помощью CSS переменных:</p>
+          <h2 className={styles.sectionTitle}>CSS Variables</h2>
+          <p>You can customize the skeleton appearance using CSS variables:</p>
           <CodeBlock
-            code={`--simple-skeleton-bg: #fff;        /* Цвет фона */
---simple-skeleton-shadow: #e2eef1; /* Цвет тени */
---simple-skeleton-highlight: #ececec; /* Цвет подсветки для wave анимации */
---simple-skeleton-animation-speed: 2s; /* Скорость анимации */`}
+            code={`--simple-skeleton-bg: #fff;        /* Background color */
+--simple-skeleton-shadow: #e2eef1; /* Shadow color */
+--simple-skeleton-highlight: #ececec; /* Highlight color for wave animation */
+--simple-skeleton-animation-speed: 2s; /* Animation speed */`}
             language="css"
           />
         </section>
@@ -155,10 +168,10 @@ function App() {
           <table className={styles.apiTable}>
             <thead>
               <tr>
-                <th>Свойство</th>
-                <th>Тип</th>
-                <th>По умолчанию</th>
-                <th>Описание</th>
+                <th>Property</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
               </tr>
             </thead>
             <tbody>
@@ -166,61 +179,61 @@ function App() {
                 <td>className</td>
                 <td>string</td>
                 <td>''</td>
-                <td>Дополнительный CSS класс</td>
+                <td>Additional CSS class</td>
               </tr>
               <tr>
                 <td>height</td>
                 <td>string | number</td>
                 <td>'100px'</td>
-                <td>Высота скелетона</td>
+                <td>Skeleton height</td>
               </tr>
               <tr>
                 <td>width</td>
                 <td>string | number</td>
                 <td>'100%'</td>
-                <td>Ширина скелетона</td>
+                <td>Skeleton width</td>
               </tr>
               <tr>
                 <td>border</td>
                 <td>string</td>
                 <td>undefined</td>
-                <td>Радиус скругления углов</td>
+                <td>Border radius</td>
               </tr>
               <tr>
                 <td>circle</td>
                 <td>boolean</td>
                 <td>false</td>
-                <td>Отображение в виде круга</td>
+                <td>Display as circle</td>
               </tr>
               <tr>
                 <td>animation</td>
                 <td>'pulse' | 'wave'</td>
                 <td>'wave'</td>
-                <td>Тип анимации</td>
+                <td>Animation type</td>
               </tr>
               <tr>
                 <td>animationSpeed</td>
                 <td>number</td>
                 <td>2</td>
-                <td>Скорость анимации в секундах</td>
+                <td>Animation speed in seconds</td>
               </tr>
               <tr>
                 <td>backgroundColor</td>
                 <td>string</td>
                 <td>#ffffff</td>
-                <td>Цвет фона скелетона</td>
+                <td>Skeleton background color</td>
               </tr>
               <tr>
                 <td>highlightColor</td>
                 <td>string</td>
                 <td>#ececec</td>
-                <td>Цвет подсветки для анимации wave</td>
+                <td>Highlight color for wave animation</td>
               </tr>
               <tr>
                 <td>shadowColor</td>
                 <td>string</td>
                 <td>#e2eef1</td>
-                <td>Цвет тени скелетона</td>
+                <td>Skeleton shadow color</td>
               </tr>
             </tbody>
           </table>
@@ -230,7 +243,7 @@ function App() {
       </main>
 
       <footer className={styles.footer}>
-        <p>Made with ❤️ by ICE team</p>
+        <p>Made with ❤️ by Ice-House-Web team</p>
       </footer>
     </div>
   );

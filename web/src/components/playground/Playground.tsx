@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Skeleton } from 'simple-skeleton';
+import { Skeleton } from '@ice-house-web/simple-skeleton';
 import styles from './Playground.module.css';
 import CodeBlock from '../code-block/CodeBlock';
 
@@ -53,21 +53,21 @@ function CodePeen() {
 
   const inputConfig: TInput[] = [
     {
-      label: 'Ширина (px):',
+      label: 'Width (px):',
       id: 'width',
       type: 'number',
       value: width,
       onChange: setWidth,
     },
     {
-      label: 'Высота (px):',
+      label: 'Height (px):',
       id: 'height',
       type: 'number',
       value: height,
       onChange: setHeight,
     },
     {
-      label: 'Анимация:',
+      label: 'Animation:',
       id: 'animation',
       type: 'select',
       value: animation,
@@ -75,42 +75,42 @@ function CodePeen() {
       onChange: setAnimation,
     },
     {
-      label: 'Скругление (px):',
+      label: 'Border Radius (px):',
       id: 'border',
       type: 'number',
       value: border,
       onChange: setBorder,
     },
     {
-      label: 'Круглая форма:',
+      label: 'Circle Shape:',
       id: 'isCircle',
       type: 'checkbox',
       checked: isCircle,
       onChange: setIsCircle,
     },
     {
-      label: 'Скорость анимации (с):',
+      label: 'Animation Speed (s):',
       id: 'animationSpeed',
       type: 'number',
       value: animationSpeed,
       onChange: setAnimationSpeed,
     },
     {
-      label: 'Цвет фона:',
+      label: 'Background Color:',
       id: 'backgroundColor',
       type: 'color',
       value: backgroundColor,
       onChange: setBackgroundColor,
     },
     {
-      label: 'Цвет подсветки:',
+      label: 'Highlight Color:',
       id: 'highlightColor',
       type: 'color',
       value: highlightColor,
       onChange: setHighlightColor,
     },
     {
-      label: 'Цвет тени:',
+      label: 'Shadow Color:',
       id: 'shadowColor',
       type: 'color',
       value: shadowColor,
@@ -123,7 +123,7 @@ function CodePeen() {
 
       <div className={styles.flex}>
         <div className={styles.flexItem}>
-          <h3>Настройки</h3>
+          <h3>Settings</h3>
           <div className={styles.settings}>
             {inputConfig.map((input) => {
               if (input.type === 'select') {
@@ -182,7 +182,7 @@ function CodePeen() {
         </div>
 
         <div className={styles.flexItem}>
-          <h3 className={styles.previewTitle}>Предпросмотр</h3>
+          <h3 className={styles.previewTitle}>Preview</h3>
           <div className={styles.previewContainer}>
             <Skeleton
               width={Number(width)}
@@ -198,7 +198,7 @@ function CodePeen() {
           </div>
 
           <div className={styles.codeSection}>
-            <h4 className={styles.codeTitle}>Код компонента:</h4>
+            <h4 className={styles.codeTitle}>Component Code:</h4>
             <CodeBlock
               code={`<Skeleton
   width={${width}}

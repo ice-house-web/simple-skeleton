@@ -19,7 +19,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'simple-skeleton',
-      fileName: (format) => `skeleton.${format}.js`,
+      fileName: (format) => `simple-skeleton.${format}.js`,
     },
     rollupOptions: {
       external: ['react', 'react-dom'],

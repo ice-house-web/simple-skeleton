@@ -34,7 +34,10 @@ module.exports = {
             { type: 'breaking', section: '⚠ Breaking Changes', hidden: false },
             { type: 'feat', section: '✨ Features', hidden: false },
             { type: 'fix', section: '🐛 Bug Fixes', hidden: false },
-            { type: '*', section: '🧰 Other Changes', hidden: false },
+            { type: 'chore', section: '🧰 Other Changes', hidden: false },
+            { type: 'chore', section: '🧰 Other Changes', hidden: false },
+            { type: 'chore', section: '🧰 Other Changes', hidden: false },
+            { type: 'chore', section: '🧰 Other Changes', hidden: false },
           ],
         },
         writerOpts: {
@@ -69,7 +72,7 @@ module.exports = {
       '@semantic-release/github',
       {
         successComment:
-          "This ${issue.pull_request ? 'PR is included' : 'issue has been resolved'} in version ${nextRelease.version} :tada:",
+          "This ${issue.pull_request ? 'PR is included' : 'issue has been resolved'} in version ${nextRelease.version} :tada: \n\n Thanks for your contribution!",
         labels: ['release'],
         releasedLabels: ['released'],
       },

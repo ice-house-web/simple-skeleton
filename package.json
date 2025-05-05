@@ -3,6 +3,7 @@
   "private": false,
   "description": "A simple skeleton for React projects",
   "author": "Sergey Kazarinov <kazarinov092@gmail.com>",
+  "version": "1.0.2",
   "license": "MIT",
   "keywords": [
     "react",
@@ -17,15 +18,14 @@
   "bugs": {
     "url": "https://github.com/ice-house-web/simple-skeleton/issues"
   },
-  "version": "0.0.1",
-  "main": "dist/skeleton.umd.js",
-  "module": "dist/skeleton.es.js",
-  "types": "dist/skeleton.d.ts",
+  "main": "dist/simple-skeleton.umd.js",
+  "module": "dist/simple-skeleton.es.js",
+  "types": "dist/simple-skeleton.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/skeleton.es.js",
-      "types": "./dist/skeleton.d.ts",
-      "require": "./dist/skeleton.umd.js"
+      "import": "./dist/simple-skeleton.es.js",
+      "types": "./dist/simple-skeleton.d.ts",
+      "require": "./dist/simple-skeleton.umd.js"
     }
   },
   "files": [
@@ -45,9 +45,11 @@
   },
   "dependencies": {
     "@types/node": "^22.15.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
     "vite-plugin-dts": "^4.5.3"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
